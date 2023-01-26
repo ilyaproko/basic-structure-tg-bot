@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/app.js",
-    "build_and_start": "tsc && node ./dist/app.js",
+    "dev": "nodemon --watch 'src/**/*.ts --exec ts-node src/app.ts",
+    "start": "tsc && node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/node": "^18.11.18",
+    "@types/node-telegram-bot-api": "^0.57.6",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.32.0",
@@ -21,6 +22,10 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^2.0.20",
+    "pino": "^8.8.0",
+    "pino-pretty": "^9.1.1",
     "telegraf": "^4.11.2",
     "telegraf-session-local": "^2.1.0"
   }

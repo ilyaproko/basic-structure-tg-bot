@@ -12,13 +12,15 @@ export class StartCommand extends Command {
         this.bot.start(ctx => {
 
             console.log(ctx.session);
+            
 
             ctx.reply(
                 "Do you like this course?", 
                 Markup.inlineKeyboard([
                     Markup.button.callback("Like", "course_like"),
                     Markup.button.callback("Dislike", "course_dislike"),
-                ])
+                    Markup.button.callback("menu", "course_menu"),
+                ]),
             );
 
             this.bot.action("course_like", ctx => {

@@ -29,7 +29,6 @@ export class ConfigService implements IConfigService {
         if (!res) {
             throw new Error(`Not found key :-> ${key} in .env`);
         }
-
         return res;
     }
     
